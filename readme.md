@@ -11,7 +11,7 @@ npm install --save amend-object
 ## Usage
 
 ```js
-const amendObject = require('amend-object')
+import amendObject from 'amend-object'
 
 const me = {
   firstName: 'Linus',
@@ -29,9 +29,9 @@ console.log(me)
 
 ## API
 
-### `amendObject(obj, items) => object`
+### `amendObject(target, items) => object`
 
-Update object `obj` with `items`.
+Update object `target` with `items`.
 
 `items` should be an iterable (e.g. an array) where each item is a key/value pair.
 

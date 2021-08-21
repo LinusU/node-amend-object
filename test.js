@@ -1,7 +1,5 @@
-'use strict'
-
-const assert = require('assert')
-const amendObject = require('./')
+import assert from 'node:assert'
+import amendObject from './index.js'
 
 const test = { a: 1 }
 const returnValue = amendObject(test, [['b', 2], ['c', 3]])

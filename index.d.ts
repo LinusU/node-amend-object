@@ -1,5 +1,2 @@
-declare function amendObject<T> (obj: T, items: null | undefined): T
-declare function amendObject<T, V = any> (obj: T, items: [string, V][]): T & { [key: string]: V }
-declare function amendObject<T, V = any> (obj: T, items: [number, V][]): T & { [key: number]: V }
-declare function amendObject<T, V = any> (obj: T, items: [string | number, V][]): T & { [key: string]: V, [key: number]: V }
-export = amendObject
+export default function amendObject<T extends object> (target: T, items: null | undefined): T
+export default function amendObject<T extends object, TKey extends PropertyKey = PropertyKey, TValue = any> (target: T, items: Iterable<readonly [TKey, TValue]>): T & { [key in TKey]: TValue }
