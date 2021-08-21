@@ -10,3 +10,6 @@ assert.strictEqual(test, returnValue)
 assert.deepStrictEqual(test, { a: 1, b: 2, c: 3 })
 
 assert.throws(() => amendObject({}, 1337), TypeError)
+
+assert.deepStrictEqual(amendObject({ a: 1 }, undefined), { a: 1 })
+assert.deepStrictEqual(amendObject({ a: 1 }, null), { a: 1 })

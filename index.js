@@ -3,7 +3,7 @@
 const allowedKeyTypes = ['string', 'number']
 
 module.exports = function (obj, items) {
-  if (items == null) return {}
+  if (items == null) return obj
 
   if (typeof items[Symbol.iterator] !== 'function') {
     throw new TypeError(`Expected items to be an iterable, got ${typeof items}`)
