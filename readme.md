@@ -41,4 +41,4 @@ A `TypeError` will be thrown in the following conditions:
 
 - `items` is not an iterable
 - any element in `items` is not an object (usually an array, but can be object with the keys `0` and `1`)
-- any key is not a string or a number
+- any key is not a string, a number, or a symbol

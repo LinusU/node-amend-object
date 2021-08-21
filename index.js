@@ -1,6 +1,6 @@
 'use strict'
 
-const allowedKeyTypes = ['string', 'number']
+const allowedKeyTypes = ['string', 'number', 'symbol']
 
 module.exports = function (obj, items) {
   if (items == null) return obj
