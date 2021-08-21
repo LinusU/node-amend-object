@@ -11,7 +11,7 @@ npm install --save amend-object
 ## Usage
 
 ```js
-const amendObject = require('amend-object')
+import amendObject from 'amend-object'
 
 const me = {
   firstName: 'Linus',
@@ -29,9 +29,9 @@ console.log(me)
 
 ## API
 
-### `amendObject(obj, items) => object`
+### `amendObject(target, items) => object`
 
-Update object `obj` with `items`.
+Update object `target` with `items`.
 
 `items` should be an iterable (e.g. an array) where each item is a key/value pair.
 
@@ -41,4 +41,4 @@ A `TypeError` will be thrown in the following conditions:
 
 - `items` is not an iterable
 - any element in `items` is not an object (usually an array, but can be object with the keys `0` and `1`)
-- any key is not a string or a number
+- any key is not a string, a number, or a symbol
